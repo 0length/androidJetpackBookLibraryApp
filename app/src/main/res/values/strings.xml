@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My AppFor Test</string>
+    <string name="Book_details">Book Details</string>
+    <string name="add_Book">Add Book</string>
+
+    <string name="hint_name">Book Name</string>
+    <string name="hint_writter">Book Writter</string>
+    <string name="hint_genre">Romance</string>
+
+
+    <string name="book_id">BOOK_ID</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+</resources>

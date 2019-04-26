@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="@dimen/default_padding"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+                android:layout_width="@android:dimen/thumbnail_width"
+                android:layout_height="@android:dimen/thumbnail_height"
+                android:id="@+id/imageViewIcon"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/ic_book"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewBookName"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            tools:text="@string/hint_name"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewWritter"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/default_margin"
+            android:drawableStart="@drawable/ic_pen"
+            android:gravity="center"
+            tools:text="@string/hint_writter"/>
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            app:cardElevation="@dimen/cardview_default_elevation"
+            app:cardBackgroundColor="@color/cardview_light_background"
+            >
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/default_padding">
+            <TextView
+                    android:id="@+id/textViewGenre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_margin"
+                    android:drawableStart="@drawable/ic_genre"
+                    android:drawablePadding="@dimen/default_margin"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    tools:text="@string/hint_genre"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

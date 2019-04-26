@@ -1,0 +1,12 @@
+package org.brnrdz.data.data_model
+
+import android.arch.persistence.room.Entity
+import android.arch.persistence.room.PrimaryKey
+
+@Entity
+class Book (
+    var name : String = "",
+    var writter : String = "",
+    var genre : String = "",
+    @PrimaryKey(autoGenerate = true) var id : Int = 0
+)
