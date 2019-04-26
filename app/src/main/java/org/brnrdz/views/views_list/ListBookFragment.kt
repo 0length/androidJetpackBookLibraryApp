@@ -27,7 +27,7 @@ class ListBookFragment :android.support.v4.app.Fragment(), ListBookAdapter.OnIte
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         addFab.setOnClickListener {
-            view.findNavController().navigate(R.id.action_listBookFragment_to_fragmentAddBook)
+            view.findNavController().navigate(R.id.action1)
         }
 
         viewModel.getBookList().observe(this, Observer<List<Book>> {
@@ -38,15 +38,15 @@ class ListBookFragment :android.support.v4.app.Fragment(), ListBookAdapter.OnIte
 
     }
 
-    override fun onItemClick(Book: Book, itemView: View) {
+    override fun onItemClick(book: Book, itemView: View) {
 
         val detailBundle = Bundle().apply{
-            putInt(getString(R.string.book_id), Book.id)
+            putInt(getString(R.string.book_id), book.id)
         }
-        view?.findNavController()?.navigate(R.id.action_listBookFragment_to_detailFragment, detailBundle)
+        view?.findNavController()?.navigate(R.id.action2, detailBundle)
     }
 
-    private fun populateBookList(Booklist : List<Book>){
-        bookRecyclerView.adapter = ListBookAdapter(Booklist, this)
+    private fun populateBookList(booklist : List<Book>){
+        bookRecyclerView.adapter = ListBookAdapter(booklist, this)
     }
 }

@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation_graph"
-            app:startDestination="@+id/listBookFragment">
-
-    <fragment android:id="@+id/listBookFragment"
+            android:id="@+id/navigation_graph"
+            xmlns:tools="http://schemas.android.com/tools"
+            app:startDestination="@id/listBook"
+>
+    <fragment android:id="@+id/listBook"
               android:name="org.brnrdz.views.views_list.ListBookFragment"
-              android:label="Contact List">
-        <action android:id="@+id/action_listBookFragment_to_fragmentAddBook"
-                app:destination="@id/fragmentAddBook"/>
-        <action android:id="@+id/action_listBookFragment_to_detailFragment" app:destination="@id/detailFragment"/>
+              android:label="List Book">
+        <action android:id="@+id/action1"
+                app:destination="@id/addBook"/>
+        <action android:id="@+id/action2"
+                app:destination="@id/detailBook"/>
     </fragment>
-    <fragment android:id="@+id/fragmentAddBook"
+    <fragment android:id="@+id/addBook"
               android:name="org.brnrdz.views.views_add.FragmentAddBook"
               android:label="Add New Book"/>
-    <fragment android:id="@+id/detailFragment"
+    <fragment android:id="@+id/detailBook"
               android:name="org.brnrdz.views.views_details.DetailFragment"
               android:label="Book Detail"/>
+
 </navigation>

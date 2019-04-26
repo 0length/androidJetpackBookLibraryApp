@@ -18,7 +18,7 @@ class ListBookAdapter (
 
 
     interface OnItemClickListener{
-        fun onItemClick(Book: Book, itemView : View)
+        fun onItemClick(book: Book, itemView : View)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -36,14 +36,15 @@ class ListBookAdapter (
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        fun bind(Book: Book, listener: OnItemClickListener) = with(itemView){
-            textViewBookName.text = Book.name
-            textViewWritter.text = Book.writter
-            textViewGenre.text = Book.genre
+        fun bind(book: Book, listener: OnItemClickListener) = with(itemView) {
+            textViewBookName.text = book.name
+            textViewWritter.text = book.writter
+            textViewGenre.text = book.genre
+
 
 
             setOnClickListener {
-                listener.onItemClick(Book, it)
+                listener.onItemClick(book, it)
             }
         }
     }

@@ -6,7 +6,7 @@
 
     <fragment
             android:name="org.brnrdz.views.views_add.FragmentAddBook"
-            android:id="@+id/addPeopleFragment"
+            android:id="@+id/addBookFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 </android.support.constraint.ConstraintLayout>

@@ -22,6 +22,7 @@ abstract class BookDb : RoomDatabase(){
         fun getInstance(application: Application) :BookDb{
             synchronized(lock) {
                 if (BookDb.INSTANCE == null) {
+                    BookDb.INSTANCE =
                     Room.databaseBuilder(
                         application,
                         BookDb::class.java, BookDb.DB_NAME

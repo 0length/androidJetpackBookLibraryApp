@@ -8,20 +8,20 @@ import org.brnrdz.StartApp
 import org.brnrdz.data.data_model.Book
 
 class BookListViewModel(application : Application) : AndroidViewModel(application) {
-    private val BookRepo = getApplication<StartApp>().getBookRepo()
-    private val BookList = MediatorLiveData<List<Book>>()
+    private val bookRepo = getApplication<StartApp>().getBookRepo()
+    private val bookList = MediatorLiveData<List<Book>>()
 
     init {
         getAllBook()
     }
 
     fun getBookList() : LiveData<List<Book>> {
-        return BookList
+        return bookList
     }
 
     fun getAllBook(){
-        BookList.addSource(BookRepo.getAllBook()){
-                books -> BookList.postValue(books)
+        bookList.addSource(bookRepo.getAllBook()){
+                books -> bookList.postValue(books)
         }
     }
 
